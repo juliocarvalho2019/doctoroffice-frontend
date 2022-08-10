@@ -30,13 +30,15 @@ import { MatCardModule } from '@angular/material/card';
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
+import { MedicoListComponent } from './components/medico/medico-list/medico-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    MedicoListComponent
   ],
   imports: [
     BrowserModule,
