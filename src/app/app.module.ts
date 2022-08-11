@@ -35,6 +35,7 @@ import { LoginComponent } from './components/login/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { MedicoCreateComponent } from './components/medico/medico-create/medico-create.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { MedicoCreateComponent } from './components/medico/medico-create/medico-
       timeOut: 4000,
       closeButton: true,
       progressBar: true
-    })
+    }),
+    NgxMaskModule.forRoot(),
   ],
   providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]
