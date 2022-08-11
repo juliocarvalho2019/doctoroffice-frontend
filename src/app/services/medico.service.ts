@@ -26,4 +26,8 @@ export class MedicoService {
   update(medico: Medico): Observable<Medico> {
     return this.http.put<Medico>(`${API_CONFIG.baseUrl}/medicos/${medico.id}`, medico);
   }
+
+  delete(id: any): Observable<Medico> {
+    return this.http.delete<Medico>(`${API_CONFIG.baseUrl}/medicos/${id}`);
+  }
 }
