@@ -1,3 +1,4 @@
+import { MedicoUpdateComponent } from './components/medico/medico-update/medico-update.component';
 
 import { LoginComponent } from './components/login/login/login.component';
 import { NgModule } from '@angular/core';
@@ -14,7 +15,8 @@ const routes: Routes = [
     path: '', component: NavComponent, canActivate: [AuthGuard], children: [
       { path: 'home', component: HomeComponent },
       { path: 'medicos', component: MedicoListComponent },
-      { path: 'medicos/create', component: MedicoCreateComponent }
+      { path: 'medicos/create', component: MedicoCreateComponent },
+      { path: 'medicos/update', component: MedicoUpdateComponent }
     ]
   }
 ];
