@@ -40,9 +40,7 @@ export class MedicoCreateComponent implements OnInit {
     private router:          Router,
     ) { }
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void { }
 
   create(): void {
     this.service.create(this.medico).subscribe(() => {
