@@ -78,7 +78,7 @@ import { MedicoUpdateComponent } from './components/medico/medico-update/medico-
       closeButton: true,
       progressBar: true
     }),
-    NgxMaskModule.forRoot(),
+    NgxMaskModule.forRoot()
   ],
   providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]
