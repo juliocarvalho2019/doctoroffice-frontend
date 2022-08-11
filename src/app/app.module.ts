@@ -37,6 +37,7 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { MedicoCreateComponent } from './components/medico/medico-create/medico-create.component';
 import { NgxMaskModule } from 'ngx-mask';
 import { MedicoUpdateComponent } from './components/medico/medico-update/medico-update.component';
+import { MedicoDeleteComponent } from './components/medico/medico-delete/medico-delete.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { MedicoUpdateComponent } from './components/medico/medico-update/medico-
     MedicoListComponent,
     LoginComponent,
     MedicoCreateComponent,
-    MedicoUpdateComponent
+    MedicoUpdateComponent,
+    MedicoDeleteComponent
   ],
   imports: [
     BrowserModule,
