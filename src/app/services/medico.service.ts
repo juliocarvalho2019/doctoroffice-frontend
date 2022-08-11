@@ -14,4 +14,8 @@ export class MedicoService {
   findAll(): Observable<Medico[]> {
     return this.http.get<Medico[]>(`${API_CONFIG.baseUrl}/medicos`);
   }
+
+  create(medico: Medico): Observable<Medico> {
+    return this.http.post<Medico>(`${API_CONFIG.baseUrl}/medicos`, medico);
+  }
 }
