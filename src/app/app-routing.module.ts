@@ -1,3 +1,4 @@
+import { MedicoDeleteComponent } from './components/medico/medico-delete/medico-delete.component';
 import { LoginComponent } from './components/login/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -17,7 +18,8 @@ const routes: Routes = [
       
       { path: 'medicos', component: MedicoListComponent },
       { path: 'medicos/create', component: MedicoCreateComponent },
-      { path: 'medicos/update/:id', component: MedicoUpdateComponent }
+      { path: 'medicos/update/:id', component: MedicoUpdateComponent },
+      { path: 'medicos/delete/:id', component: MedicoDeleteComponent }
     ]
   }
 ];
