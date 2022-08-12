@@ -44,6 +44,8 @@ import { PacienteUpdateComponent } from './components/paciente/paciente-update/p
 import { PacienteDeleteComponent } from './components/paciente/paciente-delete/paciente-delete.component';
 import { ConsultaListComponent } from './components/consulta/consulta-list/consulta-list.component';
 import { ConsultaCreateComponent } from './components/consulta/consulta-create/consulta-create.component';
+import { ConsultorioCreateComponent } from './components/consultorio/consultorio-create/consultorio-create.component';
+import { ConsultorioListComponent } from './components/consultorio/consultorio-list/consultorio-list.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,10 @@ import { ConsultaCreateComponent } from './components/consulta/consulta-create/c
     PacienteCreateComponent,
     PacienteUpdateComponent,
     PacienteDeleteComponent,
+    ConsultorioListComponent,
+    //ConsultorioCreateComponent,
+   // CnsultorioUpdateComponent,
+    //ConsultorioDeleteComponent,
     ConsultaListComponent,
     ConsultaCreateComponent,
   ],

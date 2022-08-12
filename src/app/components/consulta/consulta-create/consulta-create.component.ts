@@ -1,5 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { Consulta } from 'src/app/models/consulta';
+import { Paciente } from 'src/app/models/paciente';
+import { Medico } from 'src/app/models/medico';
+import { ConsultaService } from 'src/app/services/consulta.service';
+import { MedicoService } from 'src/app/services/medico.service';
+import { PacienteService } from 'src/app/services/paciente.service';
 
 @Component({
   selector: 'app-consulta-create',
@@ -8,14 +16,35 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class ConsultaCreateComponent implements OnInit {
 
+  consulta: Consulta = {
+    prioridade:'',
+    status:'',
+    medico:'',
+    paciente:'',
+    nomePaciente:'',
+    nomeMedico:'',
+   
+  }
+
+  pacientes: Paciente[] = []
+  medicos: Medico[] = []
+
   prioridade: FormControl = new FormControl(null, [Validators.required])
   status: FormControl = new FormControl(null, [Validators.required])
   medico: FormControl = new FormControl(null, [Validators.required])
   paciente: FormControl = new FormControl(null, [Validators.required])
 
-  constructor() { }
+  constructor(
+    private consultaService: ConsultaService,
+    private pacienteService: PacienteService,
+    private medicoService: MedicoService,
+    private toastService:    ToastrService,
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
+    this.findAllPacientes();
+    this.findAllMedicos();
   }
 
   validaCampos(): boolean {
@@ -23,4 +52,27 @@ export class ConsultaCreateComponent implements OnInit {
       this.medico.valid && this.paciente.valid
   }
 
+  create(): void {
+    this.consultaService.create(this.consulta).subscribe(resposta => {
+      this.toastService.success('Consulta criada com sucesso', 'Nova consulta');
+      this.router.navigate(['consultas']);
+    }, ex => {
+      console.log(ex);
+
+      this.toastService.error(ex.error.error);
+    })
+  }
+
+  findAllPacientes(): void {
+    this.pacienteService.findAll().subscribe(resposta => {
+      this.pacientes = resposta;
+    })
+  }
+
+  findAllMedicos(): void {
+    this.medicoService.findAll().subscribe(resposta => {
+      this.medicos = resposta;
+    })
+
+}
 }

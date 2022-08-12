@@ -6,6 +6,8 @@ export interface Consulta {
     status:          string;
     medico:            any;
     paciente:            any;
+  //  consultorio: any;
+  //  nomeConsultorio: string;
     nomePaciente:     string;
     nomeMedico:     string;
  }
