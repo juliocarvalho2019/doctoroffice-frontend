@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Consultorio } from 'src/app/models/consultorio';
@@ -10,10 +11,12 @@ import { ConsultorioService } from 'src/app/services/consultorio.service';
   styleUrls: ['./consultorio-delete.component.css']
 })
 export class ConsultorioDeleteComponent implements OnInit {
+ 
   consultorio: Consultorio = {
     id:         '',
-    numeroConsultorio:       '' 
+    numeroConsultorio: '',
   }
+
   constructor(
     private service: ConsultorioService,
     private toast:    ToastrService,
@@ -21,10 +24,10 @@ export class ConsultorioDeleteComponent implements OnInit {
     private route:   ActivatedRoute,
     ) { }
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
     this.consultorio.id = this.route.snapshot.paramMap.get('id');
     this.findById();
-  }
+   }
 
   findById(): void {
     this.service.findById(this.consultorio.id).subscribe(resposta => {
