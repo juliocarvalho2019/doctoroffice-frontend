@@ -14,7 +14,7 @@ export class ConsultaListComponent implements OnInit {
   ELEMENT_DATA: Consulta[] = []
   FILTERED_DATA: Consulta[] = []
 
-  displayedColumns: string[] = ['id', 'paciente', 'medico', 'dataAbertura', 'prioridade', 'status', 'acoes'];
+  displayedColumns: string[] = ['id', 'paciente', 'medico','consultorio', 'dataAbertura', 'prioridade', 'status', 'acoes'];
   dataSource = new MatTableDataSource<Consulta>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

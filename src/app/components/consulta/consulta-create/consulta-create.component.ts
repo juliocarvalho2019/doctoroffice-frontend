@@ -8,6 +8,8 @@ import { Medico } from 'src/app/models/medico';
 import { ConsultaService } from 'src/app/services/consulta.service';
 import { MedicoService } from 'src/app/services/medico.service';
 import { PacienteService } from 'src/app/services/paciente.service';
+import { Consultorio } from 'src/app/models/consultorio';
+import { ConsultorioService } from 'src/app/services/consultorio.service';
 
 @Component({
   selector: 'app-consulta-create',
@@ -21,6 +23,8 @@ export class ConsultaCreateComponent implements OnInit {
     status:'',
     medico:'',
     paciente:'',
+    consultorio:'',
+    nomeConsultorio:'',
     nomePaciente:'',
     nomeMedico:'',
    
@@ -28,16 +32,19 @@ export class ConsultaCreateComponent implements OnInit {
 
   pacientes: Paciente[] = []
   medicos: Medico[] = []
+  consultorios: Consultorio[] = []
 
   prioridade: FormControl = new FormControl(null, [Validators.required])
   status: FormControl = new FormControl(null, [Validators.required])
   medico: FormControl = new FormControl(null, [Validators.required])
   paciente: FormControl = new FormControl(null, [Validators.required])
+  consultorio: FormControl = new FormControl(null, [Validators.required])
 
   constructor(
     private consultaService: ConsultaService,
     private pacienteService: PacienteService,
     private medicoService: MedicoService,
+    private consultorioService: ConsultorioService,
     private toastService:    ToastrService,
     private router: Router,
   ) { }
@@ -45,6 +52,7 @@ export class ConsultaCreateComponent implements OnInit {
   ngOnInit(): void {
     this.findAllPacientes();
     this.findAllMedicos();
+    this.findAllConsultorios();
   }
 
   validaCampos(): boolean {
@@ -73,6 +81,11 @@ export class ConsultaCreateComponent implements OnInit {
     this.medicoService.findAll().subscribe(resposta => {
       this.medicos = resposta;
     })
+}
 
+findAllConsultorios(): void {
+  this.consultorioService.findAll().subscribe(resposta => {
+    this.consultorios = resposta;
+  })
 }
 }
