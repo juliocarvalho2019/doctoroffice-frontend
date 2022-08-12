@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Para trabalhar com formulários no Angular 12
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
@@ -12,32 +12,36 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from '@angular/common/http';
 
 // Imports para componentes do Angular Material
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
-import { MatSelectModule } from '@angular/material/select';
-import { MatTableModule } from '@angular/material/table';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatInputModule } from '@angular/material/input';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
 // Componentes do projeto
-import { NavComponent } from './components/nav/nav.component';
-import { HomeComponent } from './components/home/home.component';
-import { HeaderComponent } from './components/header/header.component';
-import { MedicoListComponent } from './components/medico/medico-list/medico-list.component';
-import { LoginComponent } from './components/login/login/login.component';
-import { ToastrModule } from 'ngx-toastr';
-import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
-import { MedicoCreateComponent } from './components/medico/medico-create/medico-create.component';
 import { NgxMaskModule } from 'ngx-mask';
-import { MedicoUpdateComponent } from './components/medico/medico-update/medico-update.component';
+import { ToastrModule } from 'ngx-toastr';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login/login.component';
+import { MedicoCreateComponent } from './components/medico/medico-create/medico-create.component';
 import { MedicoDeleteComponent } from './components/medico/medico-delete/medico-delete.component';
+import { MedicoListComponent } from './components/medico/medico-list/medico-list.component';
+import { MedicoUpdateComponent } from './components/medico/medico-update/medico-update.component';
+import { NavComponent } from './components/nav/nav.component';
+import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
+import { PacienteListComponent } from './components/paciente/paciente-list/paciente-list.component';
+import { PacienteCreateComponent } from './components/paciente/paciente-create/paciente-create.component';
+import { PacienteUpdateComponent } from './components/paciente/paciente-update/paciente-update.component';
+import { PacienteDeleteComponent } from './components/paciente/paciente-delete/paciente-delete.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +53,11 @@ import { MedicoDeleteComponent } from './components/medico/medico-delete/medico-
     LoginComponent,
     MedicoCreateComponent,
     MedicoUpdateComponent,
-    MedicoDeleteComponent
+    MedicoDeleteComponent,
+    PacienteListComponent,
+    PacienteCreateComponent,
+    PacienteUpdateComponent,
+    PacienteDeleteComponent,
   ],
   imports: [
     BrowserModule,

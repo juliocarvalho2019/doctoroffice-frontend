@@ -1,19 +1,19 @@
 <div class="container mat-elevation-z8">
     <form class="form">
   
-       <h1 class="fullWidth">Deletar Médico</h1>
+       <h1 class="fullWidth">Deletar Paciente</h1>
        <img class="fullWidth" src="assets/img/medico-create.png" alt="Doctor Office">
   
        <section class="section">
          <mat-checkbox [disabled]="true" class="margin" color="primary">Admin</mat-checkbox>
          <mat-checkbox [disabled]="true" class="margin" color="primary">Paciente</mat-checkbox>
-         <mat-checkbox [disabled]="true" class="margin" color="primary">Medico</mat-checkbox>
+         <mat-checkbox [disabled]="true" class="margin" color="primary">Paciente</mat-checkbox>
         </section>
   
         <mat-form-field class="fullWidth" appearance="legacy">
           <mat-label>Nome</mat-label>
           <input 
-          [(ngModel)]="medico.nome"
+          [(ngModel)]="paciente.nome"
           name="nome"
           [disabled]="true"
          matInput>
@@ -23,7 +23,7 @@
         <mat-form-field class="fullWidth" appearance="legacy">
           <mat-label>CPF</mat-label>
           <input 
-          [(ngModel)]="medico.cpf"
+          [(ngModel)]="paciente.cpf"
           name="cpf"
          [disabled]="true"
         matInput>
@@ -33,7 +33,7 @@
         <mat-form-field class="fullWidth" appearance="legacy">
           <mat-label>E-mail</mat-label>
           <input 
-          [(ngModel)]="medico.email"
+          [(ngModel)]="paciente.email"
          name="email"
          [disabled]="true"
          matInput>
@@ -41,39 +41,9 @@
         </mat-form-field>
   
         <mat-form-field class="fullWidth" appearance="legacy">
-            <mat-label>CRM</mat-label>
-            <input 
-            [(ngModel)]="medico.crm"
-            name="crm"
-            [disabled]="true"
-            matInput>
-            <mat-icon matSuffix>pin</mat-icon>
-          </mat-form-field>
-  
-          <mat-form-field class="fullWidth" appearance="legacy">
-            <mat-label>Especialidade</mat-label>
-            <input 
-            [(ngModel)]="medico.especialidade"
-            name="especialidade"
-            [disabled]="true"
-            matInput>
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field>
-  
-          <mat-form-field class="fullWidth" appearance="legacy">
-            <mat-label>Idade</mat-label>
-            <input
-            [(ngModel)]="medico.idade"
-            name="idade"
-            [disabled]="true"
-            matInput>
-            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-          </mat-form-field>
-  
-        <mat-form-field class="fullWidth" appearance="legacy">
           <mat-label>Senha</mat-label>
           <input 
-          [(ngModel)]="medico.senha"
+          [(ngModel)]="paciente.senha"
           name="senha"
           [disabled]="true"
           type="password" 
