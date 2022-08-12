@@ -10,6 +10,10 @@ import { Consulta } from "../models/consulta";
   export class ConsultaService {
   
     constructor(private http: HttpClient) { }
+    
+    findById(id: any): Observable<Consulta> {
+      return this.http.get<Consulta>(`${API_CONFIG.baseUrl}/consultas/${id}`);
+    }
   
     findAll(): Observable<Consulta[]> {
       return this.http.get<Consulta[]>(`${API_CONFIG.baseUrl}/consultas`);
@@ -17,5 +21,9 @@ import { Consulta } from "../models/consulta";
 
     create(consulta: Consulta): Observable<Consulta> {
       return this.http.post<Consulta>(`${API_CONFIG.baseUrl}/consultas`, consulta);
+    }
+
+    update(consulta: Consulta): Observable<Consulta> {
+      return this.http.put<Consulta>(`${API_CONFIG.baseUrl}/consultas/${consulta.id}`, consulta);
     }
   }
