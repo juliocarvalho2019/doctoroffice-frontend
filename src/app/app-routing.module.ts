@@ -20,6 +20,7 @@ import { ConsultorioCreateComponent } from './components/consultorio/consultorio
 import { ConsultorioDeleteComponent } from './components/consultorio/consultorio-delete/consultorio-delete.component';
 import { ConsultorioListComponent } from './components/consultorio/consultorio-list/consultorio-list.component';
 import { ConsultorioUpdateComponent } from './components/consultorio/consultorio-update/consultorio-update.component';
+import { ConsultaUpdateComponent } from './components/consulta/consulta-update/consulta-update.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -45,6 +46,7 @@ const routes: Routes = [
 
       { path: 'consultas', component: ConsultaListComponent },
       { path: 'consultas/create', component: ConsultaCreateComponent },
+      { path: 'consultas/update/:id', component: ConsultaUpdateComponent },
     ]
   }
 ];
