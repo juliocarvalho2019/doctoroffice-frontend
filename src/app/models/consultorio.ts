@@ -1,4 +1,4 @@
 export interface Consultorio {
     id?:                any;
-    numeroConsultorio: string;
+    numeroConsultorio: any;
  }

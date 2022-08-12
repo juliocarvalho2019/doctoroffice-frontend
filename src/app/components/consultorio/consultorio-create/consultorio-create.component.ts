@@ -13,39 +13,36 @@ import { ConsultorioService } from 'src/app/services/consultorio.service';
 export class ConsultorioCreateComponent implements OnInit {
 
   consultorio: Consultorio = {
-    id:         '',
-    numeroConsultorio: '',
+    numeroConsultorio:  '',
   }
 
-  numeroConsultorio: FormControl =   new FormControl(null, Validators.required);
  
 
+  numeroConsultorio: FormControl = new FormControl(null, [Validators.required]);
+ 
   constructor(
-    private service: ConsultorioService,
-    private toast:    ToastrService,
-    private router:          Router,
-    ) { }
+    private consultorioService: ConsultorioService,
+    private toastService:    ToastrService,
+    private router: Router,
+  ) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+  }
 
   create(): void {
-    this.service.create(this.consultorio).subscribe(() => {
-      this.toast.success('Consultorio cadastrado com sucesso', 'Cadastro');
-      this.router.navigate(['consultorios'])
+    this.consultorioService.create(this.consultorio).subscribe(resposta => {
+      this.toastService.success('Consultório criado com sucesso', 'Novo chamado');
+      this.router.navigate(['consultorios']);
     }, ex => {
-      if(ex.error.errors) {
-        ex.error.errors.forEach(element => {
-          this.toast.error(element.message);
-        });
-      } else {
-        this.toast.error(ex.error.message);
-      }
+      console.log(ex);
+      
+      this.toastService.error(ex.error.error);
     })
   }
- 
+
   validaCampos(): boolean {
     return this.numeroConsultorio.valid 
+      
   }
-
 
 }
