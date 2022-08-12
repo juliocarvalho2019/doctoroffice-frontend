@@ -1,3 +1,4 @@
+import { ConsultaCreateComponent } from './components/consulta/consulta-create/consulta-create.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
@@ -34,6 +35,7 @@ const routes: Routes = [
       { path: 'pacientes/delete/:id', component: PacienteDeleteComponent },
 
       { path: 'consultas', component: ConsultaListComponent },
+      { path: 'consultas/create', component: ConsultaCreateComponent },
     ]
   }
 ];
