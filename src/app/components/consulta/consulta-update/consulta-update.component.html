@@ -4,7 +4,7 @@
  
      <div class="status-prioridade">
        <mat-form-field appearance="outline">
-          <mat-label>{{ retornaStatus(consulta.status) }}</mat-label>
+          <mat-label>STATUS ({{ retornaStatus(consulta.status) }})</mat-label>
           <mat-select  
            [(ngModel)]="consulta.status"
            name="status"
@@ -17,7 +17,7 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
-          <mat-label>{{ retornaPrioridade(consulta.prioridade) }}</mat-label>
+          <mat-label>PRIORIDADE ({{ retornaPrioridade(consulta.prioridade) }})</mat-label>
           <mat-select
             [(ngModel)]="consulta.prioridade"
             name="prioridade"
@@ -32,7 +32,7 @@
  
      <div class="medico">
        <mat-form-field class="full-width" appearance="outline">
-          <mat-label>{{ consulta.nomeMedico }}</mat-label>
+          <mat-label>MÉDICO ({{ consulta.nomeMedico }})</mat-label>
           <mat-select
             [(ngModel)]="consulta.medico"
             name="medico"
@@ -45,7 +45,7 @@
  
      <div class="paciente">
        <mat-form-field class="full-width" appearance="outline">
-          <mat-label>{{ consulta.nomePaciente }}</mat-label>
+          <mat-label>PACIENTE ({{ consulta.nomePaciente }})</mat-label>
           <mat-select
           [(ngModel)]="consulta.paciente"
           name="paciente"
@@ -58,7 +58,7 @@
  
      <div class="consultorio">
        <mat-form-field class="full-width" appearance="outline">
-          <mat-label>{{ consulta.consultorio }}</mat-label>
+          <mat-label>CONSULTÓRIO ({{ consulta.consultorio }})</mat-label>
           <mat-select
           [(ngModel)]="consulta.consultorio"
           name="consultorio"

@@ -49,6 +49,7 @@ import { ConsultorioListComponent } from './components/consultorio/consultorio-l
 import { ConsultorioUpdateComponent } from './components/consultorio/consultorio-update/consultorio-update.component';
 import { ConsultorioDeleteComponent } from './components/consultorio/consultorio-delete/consultorio-delete.component';
 import { ConsultaUpdateComponent } from './components/consulta/consulta-update/consulta-update.component';
+import { ConsultaReadComponent } from './components/consulta/consulta-read/consulta-read.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { ConsultaUpdateComponent } from './components/consulta/consulta-update/c
     ConsultaListComponent,
     ConsultaCreateComponent,
     ConsultaUpdateComponent,
+    ConsultaReadComponent,
   ],
   imports: [
     BrowserModule,
