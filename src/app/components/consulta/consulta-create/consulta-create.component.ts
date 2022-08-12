@@ -57,7 +57,7 @@ export class ConsultaCreateComponent implements OnInit {
 
   validaCampos(): boolean {
     return this.prioridade.valid && this.status.valid &&
-      this.medico.valid && this.paciente.valid
+      this.medico.valid && this.paciente.valid && this.consultorio.valid
   }
 
   create(): void {

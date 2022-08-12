@@ -57,13 +57,13 @@
 
     <div class="consultorio">
       <mat-form-field class="full-width" appearance="outline">
-         <mat-label>Selecione um consultorio</mat-label>
+         <mat-label>Selecione um consultório</mat-label>
          <mat-select
          [(ngModel)]="consulta.consultorio"
          name="consultorio"
          [formControl]="consultorio" 
          required>
-         <mat-option *ngFor="let consult of consultorios" value="{{ consult.id }}">{{ consult.numeroConsultorio  }}</mat-option>
+         <mat-option *ngFor="let consult of consultorios" value="{{ consult.id }}">{{ consult.numeroConsultorio}}</mat-option>
          </mat-select>
        </mat-form-field>
     </div>

@@ -16,6 +16,6 @@ import { Consulta } from "../models/consulta";
     }
 
     create(consulta: Consulta): Observable<Consulta> {
-      return this.http.post<Consulta>(`${API_CONFIG.baseUrl}/chamados`, consulta);
+      return this.http.post<Consulta>(`${API_CONFIG.baseUrl}/consultas`, consulta);
     }
   }

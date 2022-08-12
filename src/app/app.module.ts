@@ -48,6 +48,7 @@ import { ConsultorioCreateComponent } from './components/consultorio/consultorio
 import { ConsultorioListComponent } from './components/consultorio/consultorio-list/consultorio-list.component';
 import { ConsultorioUpdateComponent } from './components/consultorio/consultorio-update/consultorio-update.component';
 import { ConsultorioDeleteComponent } from './components/consultorio/consultorio-delete/consultorio-delete.component';
+import { ConsultaUpdateComponent } from './components/consulta/consulta-update/consulta-update.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { ConsultorioDeleteComponent } from './components/consultorio/consultorio
     ConsultorioDeleteComponent,
     ConsultaListComponent,
     ConsultaCreateComponent,
+    ConsultaUpdateComponent,
   ],
   imports: [
     BrowserModule,
