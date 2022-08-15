@@ -16,10 +16,10 @@ export class NavComponent implements OnInit {
     private toast: ToastrService) { }
 
   ngOnInit(): void {
-    //this.router.navigate(['home'])
+    this.router.navigate(['home'])
     //this.router.navigate(['medicos'])
     //this.router.navigate(['medicos/create'])
-    this.router.navigate(['consultas'])
+   // this.router.navigate(['consultas'])
   }
 
   logout() {
