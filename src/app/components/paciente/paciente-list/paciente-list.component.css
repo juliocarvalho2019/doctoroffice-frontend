@@ -23,6 +23,7 @@ h1 {
 
 .edit {
    color: rgb(0, 153, 255);
+   padding: 1rem;
 }
 
 .delete {
